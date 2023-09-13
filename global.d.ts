@@ -1,9 +1,7 @@
 declare global {
   namespace Domain {
     interface Todo {
-      items: TodoItem[];
-    }
-    interface TodoItem {
+      id: number;
       value: string;
     }
   }
