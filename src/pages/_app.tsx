@@ -5,7 +5,6 @@ import { useEffect } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const { initialize } = useServiceWorker();
-
   useEffect(() => {
     initialize();
   }, []);
