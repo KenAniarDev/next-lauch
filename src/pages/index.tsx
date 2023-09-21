@@ -46,10 +46,16 @@ export default function Home() {
                 url="https://github.com/kmavillanosa"
                 imgSrc="/assets/github.png"
               />
-              <img style={{ padding: 1 }} width={25} height={25} id="installButton" src="/assets/install.png" alt="Install Button" />
+              <img
+                style={{ padding: 1 }}
+                width={25}
+                height={25}
+                id="installButton"
+                src="/assets/install.png"
+                alt="Install Button"
+              />
             </div>
           </div>
-
         </div>
       </Layout>
     </Page>

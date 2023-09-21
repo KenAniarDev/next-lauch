@@ -23,35 +23,21 @@ NextLaunch is a powerful Next.js boilerplate with built-in Progressive Web App (
 First, Install me on your machine
 
 ```bash
-
-
-
 npm  i  @kmavillanosa/nextlaunch
-
-
-
 ```
 
 then execute this command
 
 ```bash
-
-
-
 npx  @kmavillanosa/nextlaunch  <your-project-here>
-
-
-
 ```
 
 run the development server:
 
 ```bash
-
 npm  run  dev
-
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. Or you can view the live demo for this boilerplate. Open this link ---> [Demo](https://kmavillanosa-nextlaunch.netlify.app)
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
