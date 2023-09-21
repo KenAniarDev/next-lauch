@@ -54,7 +54,6 @@ export default function Home() {
                 src="/assets/install.png"
                 alt="Install Button"
               />
-              <a href="sms:+639452873791?body=Hello,%20this%20is%20a%20predefined%20message!">Send SMS</a>
             </div>
           </div>
         </div>
