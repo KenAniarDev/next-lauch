@@ -33,7 +33,7 @@ export default function Home() {
           <div style={containerStyle}>
             <h1>
               Welcome to{" "}
-              <strong style={{ color: "#4834d4" }}>NextLaunch</strong> 🚀🚀🚀 🤘
+              <strong style={{ color: "#4834d4" }}>NextLaunch!</strong> 🚀🚀🚀 🤘
             </h1>
           </div>
           <div style={containerStyle}>
