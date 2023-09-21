@@ -1,6 +1,5 @@
 import { handleBeforeInstallPrompt } from "@/shared/pwa/handleBeforeInstallPrompt";
-import { handleFetchEvent } from "@/shared/pwa/handleFetchEvent";
-import { handleInstallEvent } from "@/shared/pwa/handleInstallEvent";
+import { useState } from "react";
 
 export const useServiceWorker = () => {
   const initialize = () => {
@@ -22,21 +21,9 @@ export const useServiceWorker = () => {
             }
           );
       });
+
+      window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     }
-
-    addEventListener("fetch", handleFetchEvent);
-
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-    window.addEventListener("install", handleInstallEvent);
-
-    return () => {
-      removeEventListener("fetch", handleFetchEvent);
-      // Clean up the event listener when the component unmounts
-      window.removeEventListener(
-        "beforeinstallprompt",
-        handleBeforeInstallPrompt
-      );
-    };
   };
 
   return { initialize };

@@ -1,25 +1,22 @@
 export const handleBeforeInstallPrompt = (event) => {
-  // Prevent the default prompt
   event.preventDefault();
-  // Store the event for later use
-  const deferredPrompt = event;
-
-  // Show your custom install button or UI
-
-  const installButton = document.createElement("button");
-  installButton.textContent = "Install App";
+  const installButton = document.getElementById("installButton");
+  installButton.style.display = "block";
   installButton.addEventListener("click", () => {
-    // Show the installation prompt
-    deferredPrompt.prompt();
+    // Access deferredPrompt from the event object
+    const deferredPrompt = event;
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(function (choiceResult) {
+        if (choiceResult.outcome === "accepted") {
+          console.log("User accepted the install prompt");
+        } else {
+          console.log("User dismissed the install prompt");
+        }
+        // Reset deferredPrompt
+        event = null;
+        document.getElementById("installButton").style.display = "none";
+      });
+    }
   });
-
-  // Add the install button to your UI
-  // For example, you can append it to a specific element in your HTML
-  const installButtonContainer = document.getElementById(
-    "install-button-container"
-  );
-  if (installButtonContainer) {
-    installButtonContainer.replaceChildren(installButton);
-    // installButtonContainer.appendChild(installButton);
-  }
 };
